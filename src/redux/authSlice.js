@@ -1,5 +1,6 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
+
 export const loginUserAsync=createAsyncThunk('auth/loginUserAsync',async(payload)=>{
     const response=await fetch("https://reqres.in/api/login",{
         method: 'POST', 
@@ -24,10 +25,12 @@ export const loginUserAsync=createAsyncThunk('auth/loginUserAsync',async(payload
 
 export const authSlice=createSlice(
     {
+   
     name:"auth",
     initialState:{isLoggedIn:false,token:""},
     reducers:{
         logout:(state,action)=>{
+            
             return {isLoggedIn: action.payload.isLoggedIn,token:""};
         }
     },

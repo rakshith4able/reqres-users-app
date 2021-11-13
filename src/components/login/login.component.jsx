@@ -1,15 +1,17 @@
 import React from 'react';
 import useInputState from '../../hooks/useInputState';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loginUserAsync } from '../../redux/authSlice';
+import { Navigate } from 'react-router';
+
+
 import './login.styles.css';
 
 function Login() {
-
     const [email, setEmail] = useInputState('');
     const [password, setPassword] = useInputState('');
     const dispatch = useDispatch();
-
+    const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(loginUserAsync({ email: email, password: password }));
@@ -17,15 +19,16 @@ function Login() {
 
 
     return (
-        <div className="Login" onSubmit={handleSubmit}>
-            <form>
-                <label>E-mail</label>
-                <input type="email" placeholder="Enter E-mail" value={email} onChange={setEmail} />
-                <label>Password</label>
-                <input type="password" placeholder="Enter Password" value={password} onChange={setPassword} />
-                <input type="submit" value="LOGIN" />
-            </form>
-        </div>
+        !isLoggedIn ?
+            <div className="Login" onSubmit={handleSubmit}>
+                <form>
+                    <label>E-mail</label>
+                    <input type="email" placeholder="Enter E-mail" value={email} onChange={setEmail} />
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter Password" value={password} onChange={setPassword} />
+                    <input type="submit" value="LOGIN" />
+                </form>
+            </div> : <Navigate to="/user" />
     )
 }
 
