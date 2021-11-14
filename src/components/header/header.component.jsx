@@ -39,9 +39,13 @@ const Header = () => {
                 <input type="submit" value="Add" />
             </form>
         </Modal >
+
         <h1 className="Header-heading">Users</h1>
-        <button className="Header-button" onClick={() => { setModalIsOpen(true) }}>Add User</button>
-        <button className="Header-logout" onClick={handleLogout}>Log Out</button>
+
+        <div className="Header-buttons">
+            <button className="Header-button" onClick={() => { setModalIsOpen(true) }}>Add User</button>
+            <button className="Header-logout" onClick={handleLogout}>Log Out</button>
+        </div>
     </div>);
 }
 

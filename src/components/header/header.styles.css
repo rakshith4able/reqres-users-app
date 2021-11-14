@@ -2,6 +2,10 @@
     height: 10vh;
     background-color: rgba(36, 37, 42, 1);
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Header-heading {
@@ -9,21 +13,37 @@
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 300;
+    justify-self: flex-start;
+    margin-left: 2rem;
+}
+
+.Header-buttons {
+    justify-self: flex-end;
 }
 
 .Header-button {
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    transform: translate(-50%, -50%);
-    padding: 1rem;
-    background-color: rgb(255, 193, 24);
-    outline: none;
+    background-color: rgba(255, 229, 79, 0.932);
     border: none;
     border-radius: 5px;
-    font-size: 2rem;
+}
+
+.Header-logout {
+    background-color: rgba(241, 44, 44, 0.932);
+    border: none;
+    border-radius: 5px;
+}
+
+.Header-button,
+.Header-logout {
+    cursor: pointer;
+    width: 10rem;
+    height: 4rem;
+    margin: 0 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
+
+
 
 /* Styling modal */
 
@@ -92,4 +112,23 @@
     color: white;
     border-radius: 5px;
     border: none;
+}
+
+
+.Card-close {
+    font-size: 1rem;
+    font-size: bold;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
 }
