@@ -1,14 +1,17 @@
 import React from "react";
 import Card from "../card/card.component";
 import './card-wrapper.styles.css';
-
-const CardWrapper = (props) => {
-    const { users } = props;
+import { useSelector } from 'react-redux';
+const CardWrapper = () => {
+   
+    const users =useSelector(state=>state.user);
+  
     return <div className="CardWrapper">
         {
-            // users.map((user) => {
-            //     return <Card user={user} key={user.id} deleteUser={props.deleteUser} />
-            // })
+         
+            users.map((user) => {
+                return <Card user={user} key={user.id}  />
+            })
 
         }
     </div>;

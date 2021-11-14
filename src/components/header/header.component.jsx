@@ -5,6 +5,7 @@ import useInputState from "../../hooks/useInputState";
 
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/authSlice";
+import { addUserAsync } from "../../redux/usersSlice";
 
 import Modal from "react-modal";
 import './header.styles.css';
@@ -25,6 +26,12 @@ const Header = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        dispatch(addUserAsync({
+            email: email,
+            first_name: first_name,
+            last_name: last_name,
+            avatar: avatar
+        }));
     }
 
 

@@ -8,6 +8,7 @@
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template-columns: 90% 10%;
+    align-items: center;
 }
 
 .Card:hover {
@@ -17,13 +18,13 @@
 
 
 .Card-remove {
-    width: 5rem;
-    height: 3rem;
+    padding: 1rem;
     justify-self: flex-end;
     border: none;
     background-color: rgba(185, 23, 23, 0.89);
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 
 }
 
@@ -43,6 +44,7 @@
     left: 50%;
     right: 40px;
     bottom: 40px;
+    height: 40rem;
     width: 30rem;
     background-color: white;
     display: flex;
