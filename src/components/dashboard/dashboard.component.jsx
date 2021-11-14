@@ -5,20 +5,23 @@ import Sidebar from '../sidebar/sidebar.component';
 import { useDispatch } from 'react-redux';
 import { getusersAsync } from "../../redux/usersSlice"
 import { useEffect } from 'react';
+import "./dashboard.styles.css";
 
-function GetUsers() {
+function Dashboard() {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getusersAsync());
     }, [dispatch])
 
     return (
-        <div className="getUsers" style={{ backgroundColor: " rgba(107, 185, 240, 1)", height: "100vh" }}>
+        <div className="Dashboard" >
             <Header />
-            <CardWrapper />
+            <div className="Dashboard-content">
+                <CardWrapper />
+            </div>
             <Sidebar />
         </div>
     )
 }
 
-export default GetUsers;
+export default Dashboard;

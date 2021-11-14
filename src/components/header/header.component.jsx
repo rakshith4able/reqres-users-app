@@ -9,6 +9,7 @@ import { addUserAsync } from "../../redux/usersSlice";
 
 import Modal from "react-modal";
 import './header.styles.css';
+import { useSelector } from "react-redux";
 Modal.setAppElement('#root');
 
 const Header = () => {
@@ -18,6 +19,7 @@ const Header = () => {
     const [last_name, setLastName] = useInputState('');
     const [avatar, setAvatar] = useInputState('');
 
+    const isAdmin = useSelector(state => state.auth.isAdmin);
 
     const handleLogout = () => {
         dispatch(logout({ isLoggedIn: false }));
@@ -50,10 +52,10 @@ const Header = () => {
             </form>
         </Modal >
 
-        <h1 className="Header-heading">Users</h1>
+        <h1 className="Header-heading">{isAdmin ? "Admin" : "User"}</h1>
 
         <div className="Header-buttons">
-            <button className="Header-button" onClick={() => { setModalIsOpen(true) }}>Add User</button>
+            {isAdmin && <button className="Header-button" onClick={() => { setModalIsOpen(true) }}>Add User</button>}
             <button className="Header-logout" onClick={handleLogout}>Log Out</button>
         </div>
     </div>);

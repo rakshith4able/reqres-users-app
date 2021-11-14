@@ -1,6 +1,6 @@
 import './App.css';
 import Login from './components/login/login.component';
-import GetUsers from './components/get-users/get-users.component';
+import Dashboard from './components/dashboard/dashboard.component'
 import RequireAuth from './RequireAuth';
 import NotFound from "./components/not-found/not-found.component";
 import { Routes, Route,Navigate} from "react-router-dom";
@@ -16,7 +16,7 @@ function App() {
         path="/user"
         element={
           <RequireAuth  redirectTo="/login">
-             <GetUsers  /> 
+             <Dashboard  /> 
           </RequireAuth>
         }/>
           <Route path="*" element={<NotFound/>}/>

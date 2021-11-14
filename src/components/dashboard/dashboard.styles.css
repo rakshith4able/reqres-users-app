@@ -1,0 +1,47 @@
+.Dashboard {
+    background-color: rgb(218, 218, 218);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+    grid-template-columns: 30vh 1fr 1fr;
+    grid-template-areas: "header header header"
+        "sidebar content content";
+
+}
+
+.Dashboard-content {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (max-width:650px) {
+    html {
+        font-size: 50%;
+    }
+
+    .Dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 20vh 1fr;
+        grid-template-areas: "header"
+            "sidebar"
+            "content";
+    }
+
+    .Dashboard-content {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:400px) {
+    html {
+        font-size: 40%;
+    }
+
+    .Dashboard {
+        grid-template-rows: 10vh 20vh max-content;
+    }
+
+}
