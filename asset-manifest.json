@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/reqres-users-app/static/css/main.21a3e389.chunk.css",
+    "main.js": "/reqres-users-app/static/js/main.bebeaeaf.chunk.js",
+    "main.js.map": "/reqres-users-app/static/js/main.bebeaeaf.chunk.js.map",
+    "runtime-main.js": "/reqres-users-app/static/js/runtime-main.1629ef49.js",
+    "runtime-main.js.map": "/reqres-users-app/static/js/runtime-main.1629ef49.js.map",
+    "static/js/2.8352710e.chunk.js": "/reqres-users-app/static/js/2.8352710e.chunk.js",
+    "static/js/2.8352710e.chunk.js.map": "/reqres-users-app/static/js/2.8352710e.chunk.js.map",
+    "static/js/3.dcdd27a5.chunk.js": "/reqres-users-app/static/js/3.dcdd27a5.chunk.js",
+    "static/js/3.dcdd27a5.chunk.js.map": "/reqres-users-app/static/js/3.dcdd27a5.chunk.js.map",
+    "index.html": "/reqres-users-app/index.html",
+    "static/css/main.21a3e389.chunk.css.map": "/reqres-users-app/static/css/main.21a3e389.chunk.css.map",
+    "static/js/2.8352710e.chunk.js.LICENSE.txt": "/reqres-users-app/static/js/2.8352710e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1629ef49.js",
+    "static/js/2.8352710e.chunk.js",
+    "static/css/main.21a3e389.chunk.css",
+    "static/js/main.bebeaeaf.chunk.js"
+  ]
+}
