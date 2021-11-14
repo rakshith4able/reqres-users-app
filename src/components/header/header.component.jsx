@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+
 import useInputState from "../../hooks/useInputState";
 
 import { useDispatch } from "react-redux";
@@ -6,7 +8,7 @@ import { logout } from "../../redux/authSlice";
 
 import Modal from "react-modal";
 import './header.styles.css';
-
+Modal.setAppElement('#root');
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -30,6 +32,7 @@ const Header = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     return (<div className="Header">
         <Modal isOpen={modalIsOpen} className="Modal" overlayClassName="Overlay" onRequestClose={() => setModalIsOpen(false)}>
+
             <div className="Card-close" onClick={() => { setModalIsOpen(false) }}>X</div>
             <form className="Modal-form" onSubmit={handleSubmit}>
                 <input type="text" value={first_name} placeholder="Enter First Name..." onChange={setFirstName} />

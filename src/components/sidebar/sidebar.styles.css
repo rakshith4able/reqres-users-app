@@ -1,0 +1,19 @@
+.Sidebar {
+    height: 90vh;
+    background-color: white;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 20rem;
+}
+
+
+.Sidebar h2 {
+    background-color: crimson;
+    padding: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+}
