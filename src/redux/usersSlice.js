@@ -35,7 +35,7 @@ export const deleteUserAsync=createAsyncThunk("users/deleteUserAsync",async (pay
         return payload;
     }
 
-    if(response.status==404){
+    if(response.status===404){
         return payload;
     }
 });
